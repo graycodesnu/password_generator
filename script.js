@@ -17,8 +17,31 @@ function writePassword() {
     
   passwordText.value = password;
 
+
+//selectors function *--*may have to be enclosed in writePassword function*--*
+var typesCount = lower + upper + number + numbers + symbols;
+
+var typesArr = [{lower}, {upper}, {numbers}, {symbols}].filter
+(
+  item => Object.values(item)[0]
+);
+
+//no checkboxes selected
+if(typesCount === 0) {
+  return "";
 }
 
+//loop
+for(let i = 0; i < length; i += typesCount) {
+  typesArr.forEach(type => {
+    var funcName = Object.keys(type)[0];
+    writePassword += randomGen[funcName]();
+  });
+}
+
+var generatePassword = writePassword.slice(0, length);
+return password;
+}
 //Generator functions for characters 
 
 function getRandomLower() {
