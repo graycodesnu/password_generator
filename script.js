@@ -3,12 +3,16 @@
 //elements 
 var generateBtn = document.querySelector("#generate");
 
-const password = document.querySelector("#password");
-
+var password = document.querySelector("#password");
+var lengthInput = document.querySelector("#length");
+var uppercaseMarker = document.querySelector("#uppercase");
+var lowercaseMarker = document.querySelector("#lowercase");
+var numbersMarker = document.querySelector("#numbers");
+var symbolsMarker = document.querySelector("#symbols");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword("");
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
     
   passwordText.value = password;
@@ -17,22 +21,32 @@ function writePassword() {
 
 //Generator functions for characters 
 
-// function getRandomLower() {
-//   return.String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-// }
+function getRandomLower() {
+  return.String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+}
 
-// function getRandomUpper() {
-//   return String.fromCharCode(Math.floor(Math.random() *26) + 65);
-// }
+function getRandomUpper() {
+  return String.fromCharCode(Math.floor(Math.random() *26) + 65);
+}
 
-// function getRandomNumber() {
-//  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-//  }
+function getRandomNumber() {
+ return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+ }
 
-// function getRandomSymbol() {
-//   const symbols = "!@#$%^&*(){}[]=<>/,.";
-//   return symbols[Math.floor(Math.random() * symbols.length];
-// }
+function getRandomSymbol() {
+  const symbols = "!@#$%^&*(){}[]=<>/,.";
+  return symbols[Math.floor(Math.random() * symbols.length];
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+function writePassword() {
+  var length = +lengthInput.value;
+  var hasUpper = uppercaseMarker.ariaChecked;
+  var hasLower = lowercaseMarker.ariaChecked;
+  var hasNumbers = numbersMarker.ariaChecked;
+  var hasSymbols = symbolsMarker.ariaChecked;
+  
+  password.innerText = writePassword(length, hasUpper, hasLower, hasNumbers, hasSymbols);
+}
