@@ -10,6 +10,14 @@ var lowercaseMarker = document.querySelector("#lowercase");
 var numbersMarker = document.querySelector("#numbers");
 var symbolsMarker = document.querySelector("#symbols");
 
+//Define + call selectors function
+var selectors = {
+  lower: getRandomLower,
+  upper: getRandomUpper,
+  number: getRandomNumber,
+  symbols: getRandomSymbol,
+}
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -18,7 +26,7 @@ function writePassword() {
   passwordText.value = password;
 
 
-//selectors function *--*may have to be enclosed in writePassword function*--*
+//selectors function 
 var typesCount = lower + upper + number + numbers + symbols;
 
 var typesArr = [{lower}, {upper}, {numbers}, {symbols}].filter
@@ -45,7 +53,8 @@ return password;
 //Generator functions for characters 
 
 function getRandomLower() {
-  return.String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+  console.log(getRandomLower);
 }
 
 function getRandomUpper() {
@@ -58,7 +67,7 @@ function getRandomNumber() {
 
 function getRandomSymbol() {
   const symbols = "!@#$%^&*(){}[]=<>/,.";
-  return symbols[Math.floor(Math.random() * symbols.length];
+  return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
 // Add event listener to generate button
