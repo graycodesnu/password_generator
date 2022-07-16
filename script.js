@@ -4,7 +4,7 @@
 var generateBtn = document.querySelector("#generate");
 
 var password = document.querySelector("#password");
-var lengthInput = document.querySelector("#length");
+var lengthInput = document.querySelector("#inputs");
 var uppercaseMarker = document.querySelector("#uppercase");
 var lowercaseMarker = document.querySelector("#lowercase");
 var numbersMarker = document.querySelector("#numbers");
@@ -27,34 +27,34 @@ function writePassword() {
 
 
 //selectors function 
-var typesCount = lower + upper + number + numbers + symbols;
+  var typesCount = lower + upper + number + numbers + symbols;
 
-var typesArr = [{lower}, {upper}, {numbers}, {symbols}].filter
+  var typesArr = [{lower}, {upper}, {numbers}, {symbols}].filter
 (
   item => Object.values(item)[0]
 );
 
 //no checkboxes selected
-if(typesCount === 0) {
-  return "";
+  if(typesCount === 0) {
+    return "";
 }
 
 //loop
-for(let i = 0; i < length; i += typesCount) {
-  typesArr.forEach(type => {
-    var funcName = Object.keys(type)[0];
-    writePassword += randomGen[funcName]();
-  });
+  for(let i = 0; i < length; i += typesCount) {
+    typesArr.forEach(type => {
+      var funcName = Object.keys(type)[0];
+      writePassword += randomGen[funcName]();
+    });
+  }
+
+  var generatePassword = writePassword.slice(0, length);
+  return password;
 }
 
-var generatePassword = writePassword.slice(0, length);
-return password;
-}
 //Generator functions for characters 
 
 function getRandomLower() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-  console.log(getRandomLower);
 }
 
 function getRandomUpper() {
