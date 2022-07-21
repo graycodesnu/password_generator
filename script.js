@@ -30,31 +30,50 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
   console.log(lengthInputEl.value);
   var lengthInputValue = lengthInputEl.value;
-    if (lengthInputValue === 128) {
+  if (lengthInputValue === 128) {
     console.log("yay!");
-    } else {
+  } else {
     console.log("no");
   }
 
   passwordText.value = password;
 
   // Uppercase function
-    var getUppercase = uppercaseCheckBoxEl
-    // Maybe write: uppercaseRandom ( randomize?)  
-      var uppercaseCheckBoxEl = document.getElementById('uppercase');
-      if(uppercaseCheckBoxEl.checked) {
-        console.log('yes uppercase');
-      } else {
-        console.log('no uppercase');
-      }
-      // if (getUppercase.checked) {
-      // console.log('get uppercase');
-      // } else if (getUppercase = false) {
-      //   console.log('no uppercase');
-      // }
+  var getUppercase = uppercaseCheckBoxEl;
+  var uppercaseCheckBoxEl = document.getElementById("uppercase");
+  if (uppercaseCheckBoxEl.checked) {
+    console.log("yes uppercase");
+  } else {
+    console.log("no uppercase");
+  }
 
+  // Lowercase function
+  var getLowercase = lowercaseCheckBoxEl;
+  var lowercaseCheckBoxEl = document.getElementById("lowercase");
+  if (lowercaseCheckBoxEl.checked) {
+    console.log("yes lowercase");
+  } else {
+    console.log("no lowercase");
+  }
 
-      
+  // Symbols function
+  var getSymbols = symbolsCheckBoxEl;
+  var symbolsCheckBoxEl = document.getElementById("symbols");
+  if (symbolsCheckBoxEl.checked) {
+    console.log("yes symbols");
+  } else {
+    console.log("no symbols");
+  }
+
+  // Numbers function
+  var getNumbers = numbersCheckBoxEl;
+  var numbersCheckBoxEl = document.getElementById("numbers");
+  if (numbersCheckBoxEl.checked) {
+    console.log("yes numbers");
+  } else {
+    console.log("no numbers");
+  }
+
   // Select el >>> .innerHTML = value
 }
 
