@@ -43,7 +43,8 @@ function writePassword() {
   var uppercaseCheckBoxEl = document.getElementById("uppercase");
   if (uppercaseCheckBoxEl.checked) {
     console.log("yes uppercase");
-  } else {
+    return Math.floor(Math.random(getUppercase));
+    } else {
     console.log("no uppercase");
   }
 
@@ -52,6 +53,7 @@ function writePassword() {
   var lowercaseCheckBoxEl = document.getElementById("lowercase");
   if (lowercaseCheckBoxEl.checked) {
     console.log("yes lowercase");
+    return Math.floor(Math.random(getLowercase));
   } else {
     console.log("no lowercase");
   }
@@ -61,6 +63,7 @@ function writePassword() {
   var symbolsCheckBoxEl = document.getElementById("symbols");
   if (symbolsCheckBoxEl.checked) {
     console.log("yes symbols");
+    return Math.floor(Math.random(getSymbols));
   } else {
     console.log("no symbols");
   }
@@ -70,6 +73,7 @@ function writePassword() {
   var numbersCheckBoxEl = document.getElementById("numbers");
   if (numbersCheckBoxEl.checked) {
     console.log("yes numbers");
+    return Math.floor(Math.random(getNumbers));
   } else {
     console.log("no numbers");
   }
