@@ -10,18 +10,14 @@ var lowercaseCheckBoxEl = document.querySelector("#lowercase");
 var numbersCheckBoxEl = document.querySelector("#numbers");
 var symbolsCheckBoxEl = document.querySelector("#symbols");
 
-// Will write to textbox element
-passwordTextEl.innerHTML = 'string';
-
 
 // document.getElementById("password").innerHTML = password
 
 // Define valid characters
-var validCharacters;
-var getUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var getLowercase = "abcdefghijklmnopqrstuvwxyz";
-var getSymbols = "!@#$%^&*()";
-var getNumbers = "0123456789";
+  var getUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var getLowercase = "abcdefghijklmnopqrstuvwxyz";
+  var getSymbols = "!@#$%^&*()";
+  var getNumbers = "0123456789";
 
 // Link criteria functions to password field/function
 
@@ -80,7 +76,10 @@ function writePassword() {
     console.log("no numbers");
   }
 
+// Will write to password
   // Select el >>> .innerHTML = value
+  passwordTextEl.innerHTML = "";
+
 }
 
 // Add event listener to generate button
