@@ -10,7 +10,11 @@ var lowercaseCheckBoxEl = document.querySelector("#lowercase");
 var numbersCheckBoxEl = document.querySelector("#numbers");
 var symbolsCheckBoxEl = document.querySelector("#symbols");
 
-// passwordTextEl.innerHTML = "this is a string";
+// Will write to textbox element
+passwordTextEl.innerHTML = 'string';
+
+
+// document.getElementById("password").innerHTML = password
 
 // Define valid characters
 var validCharacters;
@@ -18,8 +22,6 @@ var getUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var getLowercase = "abcdefghijklmnopqrstuvwxyz";
 var getSymbols = "!@#$%^&*()";
 var getNumbers = "0123456789";
-
-// Link to selected (or unselected) checkboxes
 
 // Link criteria functions to password field/function
 
@@ -44,7 +46,7 @@ function writePassword() {
   if (uppercaseCheckBoxEl.checked) {
     console.log("yes uppercase");
     return Math.floor(Math.random(getUppercase));
-    } else {
+  } else {
     console.log("no uppercase");
   }
 
