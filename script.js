@@ -24,7 +24,6 @@ var symbolsCheckBoxEl = document.querySelector("#symbols");
 // Write password to the #password input
 function writePassword() {
   console.log("hi");
-  //var password = generatePassword();
   // var passwordText = document.querySelector("#password");
   console.log(lengthInputEl.value);
   var lengthInputValue = lengthInputEl.value;
@@ -97,4 +96,4 @@ function generatePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", generatePassword);
