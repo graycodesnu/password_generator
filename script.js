@@ -25,7 +25,7 @@ var symbolsCheckBoxEl = document.querySelector("#symbols");
 function writePassword() {
   console.log("hi");
   //var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  // var passwordText = document.querySelector("#password");
   console.log(lengthInputEl.value);
   var lengthInputValue = lengthInputEl.value;
   if (lengthInputValue === 128) {
@@ -34,14 +34,14 @@ function writePassword() {
     console.log("no");
   }
 
-  passwordText.value = password;
+  // passwordText.value = password;
 
   // Uppercase function
   var getUppercase = uppercaseCheckBoxEl;
   var uppercaseCheckBoxEl = document.getElementById("uppercase");
   if (uppercaseCheckBoxEl.checked) {
     console.log("yes uppercase");
-    return Math.floor(Math.random(getUppercase));
+    // return Math.floor(Math.random(getUppercase));
   } else {
     console.log("no uppercase");
   }
@@ -51,7 +51,7 @@ function writePassword() {
   var lowercaseCheckBoxEl = document.getElementById("lowercase");
   if (lowercaseCheckBoxEl.checked) {
     console.log("yes lowercase");
-    return Math.floor(Math.random(getLowercase));
+    // return Math.floor(Math.random(getLowercase));
   } else {
     console.log("no lowercase");
   }
@@ -61,7 +61,7 @@ function writePassword() {
   var symbolsCheckBoxEl = document.getElementById("symbols");
   if (symbolsCheckBoxEl.checked) {
     console.log("yes symbols");
-    return Math.floor(Math.random(getSymbols));
+    // return Math.floor(Math.random(getSymbols));
   } else {
     console.log("no symbols");
   }
@@ -71,7 +71,7 @@ function writePassword() {
   var numbersCheckBoxEl = document.getElementById("numbers");
   if (numbersCheckBoxEl.checked) {
     console.log("yes numbers");
-    return Math.floor(Math.random(getNumbers));
+    // return Math.floor(Math.random(getNumbers));
   } else {
     console.log("no numbers");
   }
@@ -80,6 +80,20 @@ function writePassword() {
   // Select el >>> .innerHTML = value
   passwordTextEl.innerHTML = "";
 
+  return generatePassword();
+
+}
+
+// Will write to password text element 
+
+function generatePassword() {
+  const password = writePassword();
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
+    // For loop
+    for (let i = 0; i < lengthInputValue; i ++) {
+      console.log("running for loop");
+    }
 }
 
 // Add event listener to generate button
