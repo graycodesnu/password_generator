@@ -2,7 +2,7 @@
 
 ## Introduction
 This project is a result of our bootcamp's week 3 homework assignment. Students were expected to create a password generator meeting certain criteria, which would build off of the provided starter code. The project can be found [here](https://github.com/graycodesnu/password_generator).
-![screenshot](Screen Shot 2022-07-23 at 12.19.20 AM.png)
+![screenshot](https://github.com/graycodesnu/password_generator/blob/main/Screen%20Shot%202022-07-23%20at%2012.19.20%20AM.png)
 
 ## Goals 
 The goal of this assignment was to create a password generator that would meet certain criteria:
