@@ -1,39 +1,40 @@
-// Assignment Code
+//! Elements by ID
+// var generateBtn = document.querySelector("#generate");
 
-//elements
-var generateBtn = document.querySelector("#generate");
-
-var passwordTextEl = document.querySelector("#password");
-var lengthInputEl = document.querySelector("#length");
-var uppercaseCheckBoxEl = document.querySelector("#uppercase");
-var lowercaseCheckBoxEl = document.querySelector("#lowercase");
-var numbersCheckBoxEl = document.querySelector("#numbers");
-var symbolsCheckBoxEl = document.querySelector("#symbols");
+// var passwordTextEl = document.querySelector("#password");
+// var lengthInputEl = document.querySelector("#length");
+// var uppercaseCheckBoxEl = document.querySelector("#uppercase");
+// var lowercaseCheckBoxEl = document.querySelector("#lowercase");
+// var numbersCheckBoxEl = document.querySelector("#numbers");
+// var symbolsCheckBoxEl = document.querySelector("#symbols");
 
 
 // document.getElementById("password").innerHTML = password
 
-// Define valid characters
+//! Define valid characters and requirements
   var getUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var getLowercase = "abcdefghijklmnopqrstuvwxyz";
   var getSymbols = "!@#$%^&*()";
   var getNumbers = "0123456789";
 
-// Link criteria functions to password field/function
+  var passwordLength = 0;
+  var password = "";
+  var allValidCharacters = "";
 
 // Write password to the #password input
 function writePassword() {
   console.log("hi");
-  // var passwordText = document.querySelector("#password");
-  console.log(lengthInputEl.value);
-  var lengthInputValue = lengthInputEl.value;
-  if (lengthInputValue === 128) {
-    console.log("yay!");
-  } else {
-    console.log("no");
+  allValidCharacters = "";
+  password = "";
+  passwordLength = "";
+
+  while (passwordLength < 8 || passwordLength > 128) {
+    passwordLength = window.prompt(
+      "Enter a number between 8 and 128."
+    );
   }
 
-  // passwordText.value = password;
+  }
 
   // Uppercase function
   var getUppercase = uppercaseCheckBoxEl;
