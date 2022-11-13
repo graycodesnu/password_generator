@@ -1,8 +1,11 @@
 # Password Generator
 
 ## Introduction
-This project is a result of our bootcamp's week 3 homework assignment. Students were expected to create a password generator meeting certain criteria, which would build off of the provided starter code. The project can be found [here](https://github.com/graycodesnu/password_generator).
-![screenshot](https://github.com/graycodesnu/password_generator/blob/main/Screen%20Shot%202022-07-23%20at%2012.19.20%20AM.png)
+This project is a result of our bootcamp's week 3 homework assignment. Students were expected to create a password generator meeting certain criteria, which would build off of the provided starter code. The project repository can be found [here](https://github.com/graycodesnu/password_generator) and the live link can be found [here](https://graycodesnu.github.io/password_generator/).
+
+![screenshot](./finalprompt.png)
+
+![screenshot](./final.png)
 
 ## Goals 
 The goal of this assignment was to create a password generator that would meet certain criteria:
@@ -14,8 +17,6 @@ The goal of this assignment was to create a password generator that would meet c
 + The generated password is written to the page
 
 ## Results 
-I found this project to be difficult and ended up completely starting over twice. Once I was finally able to figure out the functions I needed for my criteria variables, the project started to make more sense. 
+Despite struggling throughout my first several attempts at this project, it has been extremely satisfying to be able to revisit and refactor this code near the end of boot camp. After four months of progress in the course, `Math.floor` and `Math.random` make much more sense, in addition to rendering items to the page using JavaScript. 
 
-Despite the criteria functions coming together, I could not figure out how to write the password result to the page or the for loop in order for the functions to stop running. I have written lines of code to the page, but have not been able to generate the password. I wrote several lines of pseudo code, tried countless approaches, spent two tutoring sessions and utilized the AskBCS feature to ask questions throughout this assignment, but I still did not meet the criteria needed when it comes to appending the new password to the page. 
-
-At this point, I am not sure what I'm missing in my code and have resigned to submitting this project with the code that I do have rather than completely starting over again, in hopes that I'll receive useful feedback with which I can point myself in the right direction and resubmit this assignment. 
+I was able to define character variables, require them (or not) based on user input, and get the result to render to the page. 
