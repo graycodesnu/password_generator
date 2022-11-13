@@ -1,5 +1,5 @@
 //! Elements by ID
-// var generateBtn = document.querySelector("#generate");
+var generateBtn = document.querySelector("#generate");
 
 // var passwordTextEl = document.querySelector("#password");
 // var lengthInputEl = document.querySelector("#length");
@@ -34,55 +34,60 @@ function writePassword() {
     );
   }
 
+  var uppercaseReq = window.confirm("Should uppercase characters be included?");
+  if (uppercaseReq) {
+    allValidCharacters += getUppercase;
+  };
+
   }
 
-  // Uppercase function
-  var getUppercase = uppercaseCheckBoxEl;
-  var uppercaseCheckBoxEl = document.getElementById("uppercase");
-  if (uppercaseCheckBoxEl.checked) {
-    console.log("yes uppercase");
-    // return Math.floor(Math.random(getUppercase));
-  } else {
-    console.log("no uppercase");
-  }
+//   // Uppercase function
+//   var getUppercase = uppercaseCheckBoxEl;
+//   var uppercaseCheckBoxEl = document.getElementById("uppercase");
+//   if (uppercaseCheckBoxEl.checked) {
+//     console.log("yes uppercase");
+//     // return Math.floor(Math.random(getUppercase));
+//   } else {
+//     console.log("no uppercase");
+//   }
 
-  // Lowercase function
-  var getLowercase = lowercaseCheckBoxEl;
-  var lowercaseCheckBoxEl = document.getElementById("lowercase");
-  if (lowercaseCheckBoxEl.checked) {
-    console.log("yes lowercase");
-    // return Math.floor(Math.random(getLowercase));
-  } else {
-    console.log("no lowercase");
-  }
+//   // Lowercase function
+//   var getLowercase = lowercaseCheckBoxEl;
+//   var lowercaseCheckBoxEl = document.getElementById("lowercase");
+//   if (lowercaseCheckBoxEl.checked) {
+//     console.log("yes lowercase");
+//     // return Math.floor(Math.random(getLowercase));
+//   } else {
+//     console.log("no lowercase");
+//   }
 
-  // Symbols function
-  var getSymbols = symbolsCheckBoxEl;
-  var symbolsCheckBoxEl = document.getElementById("symbols");
-  if (symbolsCheckBoxEl.checked) {
-    console.log("yes symbols");
-    // return Math.floor(Math.random(getSymbols));
-  } else {
-    console.log("no symbols");
-  }
+//   // Symbols function
+//   var getSymbols = symbolsCheckBoxEl;
+//   var symbolsCheckBoxEl = document.getElementById("symbols");
+//   if (symbolsCheckBoxEl.checked) {
+//     console.log("yes symbols");
+//     // return Math.floor(Math.random(getSymbols));
+//   } else {
+//     console.log("no symbols");
+//   }
 
-  // Numbers function
-  var getNumbers = numbersCheckBoxEl;
-  var numbersCheckBoxEl = document.getElementById("numbers");
-  if (numbersCheckBoxEl.checked) {
-    console.log("yes numbers");
-    // return Math.floor(Math.random(getNumbers));
-  } else {
-    console.log("no numbers");
-  }
+//   // Numbers function
+//   var getNumbers = numbersCheckBoxEl;
+//   var numbersCheckBoxEl = document.getElementById("numbers");
+//   if (numbersCheckBoxEl.checked) {
+//     console.log("yes numbers");
+//     // return Math.floor(Math.random(getNumbers));
+//   } else {
+//     console.log("no numbers");
+//   }
 
-// Will write to password
-  // Select el >>> .innerHTML = value
-  passwordTextEl.innerHTML = "";
+// // Will write to password
+//   // Select el >>> .innerHTML = value
+//   passwordTextEl.innerHTML = "";
 
-  return generatePassword();
+//   return generatePassword();
 
-}
+// }
 
 // Will write to password text element 
 
