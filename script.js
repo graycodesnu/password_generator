@@ -24,21 +24,21 @@ function writePassword() {
     );
   }
 
-  //! Uppercase prompt 
+  //! Prompts
   var uppercaseReq = window.confirm("Should uppercase characters be included?");
+  var lowercaseReq = window.confirm("Should lowercase characters be included?");
+  
   if (uppercaseReq) {
     allValidCharacters += getUppercase;
+    console.log("UPPERCASE REQS", getUppercase);
   };
-  console.log("UPPERCASE REQS", getUppercase);
 
-  //! Lowercase prompt
-  var lowercaseReq = window.confirm("Should lowercase characters be included?");
-    if (lowercaseReq) {
-      allValidCharacters += getLowercase;
-    };
+  if (lowercaseReq) {
+    allValidCharacters += getLowercase;
     console.log("LOWERCASE REQS", getLowercase);
+  };
 
-  }
+}
 
 //! Generate password from requirements using math.floor and math.random
 function generatePassword() {
