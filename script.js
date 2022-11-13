@@ -18,26 +18,39 @@ function writePassword() {
   password = "";
   passwordLength = "";
 
-  while (passwordLength < 8 || passwordLength > 128) {
-    passwordLength = window.prompt(
-      "Enter a number between 8 and 128."
-    );
-  }
-
   //! Prompts
+  // Length
+  while (passwordLength < 8 || passwordLength > 128) {
+    passwordLength = window.prompt("Enter a number between 8 and 128.");
+  };
+
+  // Uppercase req
   var uppercaseReq = window.confirm("Should uppercase characters be included?");
-  var lowercaseReq = window.confirm("Should lowercase characters be included?");
-  
   if (uppercaseReq) {
     allValidCharacters += getUppercase;
-    console.log("UPPERCASE REQS", getUppercase);
+    console.log("UPPERCASE REQS", getUppercase)
   };
 
+  // Lowercase req
+  var lowercaseReq = window.confirm("Should lowercase characters be included?");
   if (lowercaseReq) {
     allValidCharacters += getLowercase;
-    console.log("LOWERCASE REQS", getLowercase);
+    console.log("LOWERCASE REQS", getLowercase)
   };
 
+  // Symbol req
+  var symbolReq = window.confirm("Should symbols be included?");
+  if (symbolReq) {
+    allValidCharacters += getSymbols;
+    console.log("SYMBOL REQ", getSymbols)
+  };
+
+  // Number req 
+  var numberReq = window.confirm("Should numbers be included?");
+  if (numberReq) {
+    allValidCharacters += getNumbers;
+    console.log("NUMBER REQ", numberReq)
+  };
 }
 
 //! Generate password from requirements using math.floor and math.random
@@ -58,5 +71,5 @@ function displayPassword() {
   passwordText.value = password;
 }
 
-// Add event listener to generate button
+//! Add event listener to generate button
 generateBtn.addEventListener("click", displayPassword);
